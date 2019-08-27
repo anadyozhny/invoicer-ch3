@@ -10,10 +10,13 @@ fail() {
     exit 1
 }
 
+export AWS_PROFILE=secdevops
+export AWS_REGION=eu-central-1
 export AWS_DEFAULT_REGION=${AWS_REGION:-us-east-1}
 
 datetag=$(date +%Y%m%d%H%M)
-identifier=$(whoami)-invoicer-$datetag
+#identifier=$(whoami)-invoicer-$datetag
+identifier=alexeyn-ivcr-$datetag
 mkdir -p tmp/$identifier
 
 echo "Creating EBS application $identifier"
@@ -135,4 +138,3 @@ aws elasticbeanstalk update-environment \
 
 url="$(jq -r '.CNAME' tmp/$identifier/$apieid.json)"
 echo "Environment is being deployed. Public endpoint is http://$url"
-
