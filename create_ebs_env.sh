@@ -10,13 +10,13 @@ fail() {
     exit 1
 }
 
-export AWS_PROFILE=secdevops
+export AWS_PROFILE=secdevops2
 export AWS_REGION=eu-central-1
 export AWS_DEFAULT_REGION=${AWS_REGION:-us-east-1}
 
 datetag=$(date +%Y%m%d%H%M)
 #identifier=$(whoami)-invoicer-$datetag
-identifier=alexeyn-ivcr-$datetag
+identifier=an-invcr-$datetag
 mkdir -p tmp/$identifier
 
 echo "Creating EBS application $identifier"
