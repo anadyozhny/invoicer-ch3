@@ -54,6 +54,7 @@ jobs:
       #          command: 'GOPATH="${GOPATH_HEAD}"; ( cd ${GOPATH_BASE}/${CIRCLE_PROJECT_REPONAME} && govend -u --prune && git diff --quiet )'
       #
       - deploy:
+          name: Push application container to dockerhub
           # Push application container to dockerhub
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
