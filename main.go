@@ -286,7 +286,7 @@ func checkCSRFToken(token string) bool {
 var oauthCfg = &oauth2.Config{
 	ClientID:     "606479880714-v36tg6qtn9alsinbvfb0qtmvjdkunq4c.apps.googleusercontent.com",
 	ClientSecret: "ySBC6T-F31ez3qsA3lnNRvtr",
-	RedirectURL:  "http://localhost:8080/oauth2callback",
+	RedirectURL:  "http://invoicer.nadyozhny.me/oauth2callback",
 	Scopes:       []string{"https://www.googleapis.com/auth/userinfo.profile"},
 	Endpoint: oauth2.Endpoint{
 		AuthURL:  "https://accounts.google.com/o/oauth2/auth",
